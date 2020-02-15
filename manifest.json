@@ -2,7 +2,7 @@
   "name": "What Coin Which Coin",
   "version": "0.1",
   "description": "A cryptocurrency price ticker. See prices at a glance from different exchanges.",
-  "permissions": ["storage"],
+  "permissions": ["activeTab", "declarativeContent", "storage"],
   "background": {
     "scripts": [
       "background.js"
