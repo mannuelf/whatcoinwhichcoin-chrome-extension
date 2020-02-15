@@ -1,1 +1,1 @@
-# whatcoinwhichcoin-chrome-extension
+# whatcoinwhichcoin chrome-extension
