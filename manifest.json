@@ -1,0 +1,6 @@
+{
+ "name": "What Coin Which Coin",
+  "version": "0.1",
+  "description": "A cryptocurrency price ticker. See prices at a glance. Change exchange.",
+  "manifest_version": 2
+}
