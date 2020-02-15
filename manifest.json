@@ -1,6 +1,13 @@
 {
- "name": "What Coin Which Coin",
+  "name": "What Coin Which Coin",
   "version": "0.1",
-  "description": "A cryptocurrency price ticker. See prices at a glance. Change exchange.",
+  "description": "A cryptocurrency price ticker. See prices at a glance from different exchanges.",
+  "permissions": ["storage"],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
   "manifest_version": 2
 }
