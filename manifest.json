@@ -5,10 +5,12 @@
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "background": {
     "scripts": [
-      "background.js"
+      "background.js",
+      "popup.js"
     ],
     "persistent": false
   },
+  "options_page": "options.html",
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
