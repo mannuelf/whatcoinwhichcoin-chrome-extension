@@ -1,6 +1,18 @@
 import React from "react";
 import CoinTicker from "./CoinTicker";
+import Api from './Api';
 import "./App.css";
+
+fetch('https://www.bitstamp.net/api/v2/ticker/btcusd')
+    .then((response) => {
+        return response.json();
+    })
+    .then((json) => {
+        console.log(json);
+    })
+    .catch((error) => {
+        console.log(error)
+    })
 
 class App extends React.Component {
     render() {
