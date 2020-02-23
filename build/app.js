@@ -128,8 +128,9 @@ module.exports = exported;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.css */ "./app/App.css");
-/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _CoinTicker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CoinTicker */ "./app/CoinTicker.js");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.css */ "./app/App.css");
+/* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_App_css__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -151,6 +152,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var App =
 /*#__PURE__*/
 function (_React$Component) {
@@ -167,62 +169,27 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "root container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "block animated fadeIn"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "block__btn--std animated flipInX"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--coin"
-      }, "BTC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--currency"
-      }, "$"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--price"
-      }, "10024.08"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "block animated fadeIn"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "block__btn--std animated flipInX"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--coin"
-      }, "BCH"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--currency"
-      }, "$"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--price"
-      }, "400.71"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "block animated fadeIn"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "block__btn--std animated flipInX"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--coin"
-      }, "ETH"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--currency"
-      }, "$"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--price"
-      }, "275.60"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "block animated fadeIn"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "block__btn--std animated flipInX"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--coin"
-      }, "XRP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--currency"
-      }, "$"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--price"
-      }, "0.28550"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "block animated fadeIn"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "block__btn--std animated flipInX"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--coin"
-      }, "LITECOIN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--currency"
-      }, "$"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "block__btn--price"
-      }, "80.19"))))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CoinTicker__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        coin: "BTC",
+        currency: "$",
+        price: 300
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CoinTicker__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        coin: "BCH",
+        currency: "$",
+        price: 500
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CoinTicker__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        coin: "LITECOIN",
+        currency: "$",
+        price: 600
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CoinTicker__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        coin: "ETHERIUM",
+        currency: "$",
+        price: 500
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CoinTicker__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        coin: "XRP",
+        currency: "$",
+        price: 800
+      }));
     }
   }]);
 
@@ -230,6 +197,38 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./app/CoinTicker.js":
+/*!***************************!*\
+  !*** ./app/CoinTicker.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function CoinTicker(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "block animated fadeIn"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    className: "block__btn--std animated flipInX"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "block__btn--coin"
+  }, props.coin), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "block__btn--currency"
+  }, props.currency), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "block__btn--price"
+  }, props.price)))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (CoinTicker);
 
 /***/ }),
 

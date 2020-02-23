@@ -18,7 +18,7 @@ const config = {
     filename: "[name].js"
   },
   resolve: {
-    extensions: ["*", ".js"]
+    extensions: ["*", ".js", ".jsx"]
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -1,65 +1,16 @@
 import React from "react";
+import CoinTicker from "./CoinTicker";
 import "./App.css";
 
 class App extends React.Component {
     render() {
         return (
             <div className="root container">
-                <div className="block animated fadeIn">
-                    <section>
-                        <div>
-                            <a href="#" className="block__btn--std animated flipInX">
-                                <span className="block__btn--coin">BTC</span>
-                                <span className="block__btn--currency">$</span>
-                                <span className="block__btn--price">10024.08</span>
-                            </a>
-                        </div>
-                    </section>
-                </div>
-                <div className="block animated fadeIn">
-                    <section>
-                        <div>
-                            <a href="#" className="block__btn--std animated flipInX">
-                            <span className="block__btn--coin">BCH</span>
-                            <span className="block__btn--currency">$</span>
-                            <span className="block__btn--price">400.71</span>
-                            </a>
-                        </div>
-                    </section>
-                </div>
-                <div className="block animated fadeIn">
-                    <section>
-                        <div>
-                            <a href="#" className="block__btn--std animated flipInX">
-                                <span className="block__btn--coin">ETH</span>
-                                <span className="block__btn--currency">$</span>
-                                <span className="block__btn--price">275.60</span>
-                            </a>
-                        </div>
-                    </section>
-                </div>
-                <div className="block animated fadeIn">
-                    <section>
-                        <div>
-                            <a href="#" className="block__btn--std animated flipInX">
-                                <span className="block__btn--coin">XRP</span>
-                                <span className="block__btn--currency">$</span>
-                                <span className="block__btn--price">0.28550</span>
-                            </a>
-                        </div>
-                    </section>
-                </div>
-                <div className="block animated fadeIn">
-                    <section>
-                        <div>
-                            <a href="#" className="block__btn--std animated flipInX">
-                                <span className="block__btn--coin">LITECOIN</span>
-                                <span className="block__btn--currency">$</span>
-                                <span className="block__btn--price">80.19</span>
-                            </a>
-                        </div>
-                    </section>
-                </div>
+                <CoinTicker coin={"BTC"} currency={"$"} price={300} />
+                <CoinTicker coin={"BCH"} currency={"$"} price={500} />
+                <CoinTicker coin={"LITECOIN"} currency={"$"} price={600} />
+                <CoinTicker coin={"ETHERIUM"} currency={"$"} price={500} />
+                <CoinTicker coin={"XRP"} currency={"$"} price={800} />
             </div>
         );
     }
