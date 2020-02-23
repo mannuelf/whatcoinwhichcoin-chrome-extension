@@ -1,30 +1,24 @@
 {
   "name": "What Coin Which Coin",
+  "short_name": "WCWC",
   "version": "0.0.2",
   "description": "A cryptocurrency price ticker. See prices at a glance from different exchanges.",
   "permissions": ["activeTab", "declarativeContent", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["http://*.github.com/*"],
+      "js": ["content.js"]
+    }
+  ],
   "background": {
     "scripts": [
-      "dist/background.js",
-      "dist/popup.js"
+      "dist/background.js"
     ],
     "persistent": false
   },
-  "options_page": "dist/options.html",
-  "page_action": {
-    "default_popup": "dist/popup.html",
-    "default_icon": {
-      "16": "dist/images/icon-16x16.png",
-      "32": "dist/images/icon-32x32.png",
-      "48": "dist/images/icon-48x48.png",
-      "128": "dist/images/icon-128x128.png"
-    },
-    "icons": {
-      "16": "dist/images/icon-16x16.png",
-      "32": "dist/images/icon-32x32.png",
-      "48": "dist/images/icon-48x48.png",
-      "128": "dist/images/icon-128x128.png"
-    }
+  "browser_action": {
+    "default_title": "What Coin Which Coin",
+    "default_popup": "index.html"
   },
   "manifest_version": 2
 }

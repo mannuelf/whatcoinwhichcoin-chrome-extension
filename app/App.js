@@ -1,8 +1,13 @@
-import React, { Component } from 'react';
+import React from "react";
+import "./App.css";
 
 class App extends React.Component {
     render() {
-        return <h1>Hellow World</h1>
+        return (
+            <div className="root">
+                <p>Welcome to React!</p>
+            </div>
+        );
     }
 }
 
