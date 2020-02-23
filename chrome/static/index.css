@@ -1,8 +1,281 @@
 html,
 body {
-    height: 500px;
-    width: 800px;
+    height: 360px;
+    width: 640px;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+
+    background: #fdfff7;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    color: #001021;
+}
+
+.container {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    max-width: 100%;
+    padding: 10px;
+}
+@media (min-width: 640px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    }
+}
+.site-header {
+    background-color: #1b98e0;
+    color: #fff;
+    grid-area: header;
+    padding: .9em;
+    min-height: 40px;
+    z-index: 100;
+}
+.block {
+    border: none;
+    grid-gap: 0;
+    grid-template-columns: 200px 1fr;
+    justify-content: center;
+    padding: 0;
+}
+a {
+    color: #50514f;
+    text-decoration: none;
+}
+a:hover {
+    color: #001021;
+}
+a:visited {
+    color: #50514f;
+}
+.block {
+    padding: 0;
+}
+.block__btn--std {
+    border-left: 10px solid #fdfff7;
+    display: grid;
+    font-size: 2em;
+    grid-gap: 0;
+    grid-template-columns: .5fr 20px 1fr;
+    padding: 1em .5em;
+    transition: all .5s ease-out;
+}
+.block__btn--std:hover {
+    background: #ededed;
+    border-left: 5px solid #1b98e0;
+    transition: all .5s ease-out;
+}
+.block__btn--coin {
+    align-self: end;
+    font-family: Rajdhani, sans-serif, Avenir, Helvetica, Arial, sans-serif;
+    font-size: .8em;
+    font-weight: 700;
+}
+.block__btn--currency {
+    font-family: Rajdhani, sans-serif, Avenir, Helvetica, Arial, sans-serif;
+    font-size: .8em;
+    font-weight: 700;
+}
+.block__btn--price {
+    align-self: end;
+    font-family: Roboto Mono, monospace, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 1.1em;
+}
+@media (min-width: 460px) {
+    .block__btn--price {
+        font-size: 2em;
+    }
+}
+.about-site,
+.footer-note {
+    padding: 1em;
+    background-color: #59ffa0;
+}
+.about-site p,
+.footer-note p {
+    margin-bottom: 0;
+    color: #001021;
+}
+.footer-note {
+    padding-bottom: 2em;
+}
+
+h1 {
+    font-family: VT323;
+    font-size: 2em;
+    margin: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 400;
+}
+h1 a[data-v-7704379d] {
+    color: #fff;
+}
+@media (min-width: 640px) {
+    h1 {
+        font-size: 2.1em;
+    }
+}
+
+.coin-logo {
+    z-index: 10;
+    background-color: #fdfff7;
+    display: inline-block;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    right: 1em;
+    top: 2.9em;
+    width: 100px;
+    border-radius: 4px 4px;
+}
+.coin-logo__image {
+    width: 100%;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin: 0 40%;
+}
+.lds-ellipsis div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #1b98e0;
+    -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div[data-v-3b8e3da2]:nth-child(1) {
+    left: 6px;
+    -webkit-animation: lds-ellipsis1 .6s infinite;
+    animation: lds-ellipsis1 .6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+    left: 6px;
+    -webkit-animation: lds-ellipsis2 .6s infinite;
+    animation: lds-ellipsis2 .6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+    left: 26px;
+    -webkit-animation: lds-ellipsis2 .6s infinite;
+    animation: lds-ellipsis2 .6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+    left: 45px;
+    -webkit-animation: lds-ellipsis3 .6s infinite;
+    animation: lds-ellipsis3 .6s infinite;
+}
+@-webkit-keyframes lds-ellipsis1 {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes lds-ellipsis1 {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes lds-ellipsis3 {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
+@keyframes lds-ellipsis3 {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
+@-webkit-keyframes lds-ellipsis2 {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        -webkit-transform: translate(19px, 0);
+        transform: translate(19px, 0);
+    }
+}
+@keyframes lds-ellipsis2 {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        -webkit-transform: translate(19px, 0);
+        transform: translate(19px, 0);
+    }
+}
+
+.site-footer {
+    display: grid;
+    grid-area: footer;
+    background: #59ffa0;
+    color: #59ffa0;
+}
+.site-footer > div {
+    padding: 1em .5em;
+    text-align: center;
+}
+.site-footer p {
+    margin: 0;
+    font-size: .8em;
+}
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.app-nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3a98e0;
+    border-radius: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    height: 50px;
+    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+}
+.app-nav-bar__item {
+    color: #fff;
+    border-right: 1px solid #fff;
+    padding: 1em;
+}
+.app-nav-bar__item--language {
+    margin-left: auto;
+    text-transform: uppercase;
+    line-height: 60px;
+    cursor: pointer;
+    color: #fff;
 }
