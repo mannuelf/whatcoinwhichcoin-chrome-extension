@@ -166,8 +166,63 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "root"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Welcome to React!"));
+        className: "root container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "block animated fadeIn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        className: "block__btn--std animated flipInX"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--coin"
+      }, "BTC"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--currency"
+      }, "$"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--price"
+      }, "10024.08"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "block animated fadeIn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        className: "block__btn--std animated flipInX"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--coin"
+      }, "BCH"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--currency"
+      }, "$"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--price"
+      }, "400.71"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "block animated fadeIn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        className: "block__btn--std animated flipInX"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--coin"
+      }, "ETH"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--currency"
+      }, "$"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--price"
+      }, "275.60"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "block animated fadeIn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        className: "block__btn--std animated flipInX"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--coin"
+      }, "XRP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--currency"
+      }, "$"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--price"
+      }, "0.28550"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "block animated fadeIn"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        className: "block__btn--std animated flipInX"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--coin"
+      }, "LITECOIN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--currency"
+      }, "$"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "block__btn--price"
+      }, "80.19"))))));
     }
   }]);
 
@@ -244,7 +299,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".root {\n    margin: 5em;\n}\n", ""]);
+exports.push([module.i, ".container {\n    display: grid;\n    grid-gap: 0;\n    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));\n    max-width: 100%;\n    padding: 0;\n}\n\n@media (min-width: 640px) {\n    .container {\n        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));\n    }\n}\n\n.site-header {\n    background-color: #1b98e0;\n    color: #fff;\n    grid-area: header;\n    padding: .9em;\n    min-height: 40px;\n    z-index: 100;\n}\n\n.block {\n    border: none;\n    grid-gap: 0;\n    grid-template-columns: 200px 1fr;\n    justify-content: center;\n    padding: 0;\n}\n\na {\n    color: #50514f;\n    text-decoration: none;\n}\n\na:hover {\n    color: #001021;\n    cursor: default;\n}\n\na:visited {\n    color: #50514f;\n}\n\n.block {\n    padding: 0;\n}\n\n.block__btn--std {\n    border-left: 10px solid #fdfff7;\n    display: grid;\n    font-size: 2em;\n    grid-gap: 0;\n    grid-template-columns: .5fr 20px 1fr;\n    padding: 1em .5em;\n    transition: all .5s ease-out;\n}\n\n.block__btn--std:hover {\n    background: #ededed;\n    border-left: 10px solid #1b98e0;\n    transition: all .5s ease-out;\n}\n\n.block__btn--coin {\n    align-self: end;\n    font-family: Rajdhani, sans-serif, Avenir, Helvetica, Arial, sans-serif;\n    font-size: .8em;\n    font-weight: 700;\n}\n\n.block__btn--currency {\n    font-family: Rajdhani, sans-serif, Avenir, Helvetica, Arial, sans-serif;\n    font-size: .8em;\n    font-weight: 700;\n}\n\n.block__btn--price {\n    align-self: end;\n    font-family: \"Roboto\", monospace, Avenir, Helvetica, Arial, sans-serif;\n    font-weight: 100;\n    font-size: 1.1em;\n}\n\n@media (min-width: 460px) {\n    .block__btn--price {\n        font-size: 2em;\n    }\n}\n\n.about-site,\n.footer-note {\n    padding: 1em;\n    background-color: #59ffa0;\n}\n\n.about-site p,\n.footer-note p {\n    margin-bottom: 0;\n    color: #001021;\n}\n\n.footer-note {\n    padding-bottom: 2em;\n}\n\nh1 {\n    font-family: VT323;\n    font-size: 2em;\n    margin: 0;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n    font-weight: 400;\n}\n\nh1 a {\n    color: #fff;\n}\n\n@media (min-width: 640px) {\n    h1 {\n        font-size: 2.1em;\n    }\n}\n\n.coin-logo {\n    z-index: 10;\n    background-color: #fdfff7;\n    display: inline-block;\n    height: auto;\n    margin: 0;\n    overflow: hidden;\n    padding: 10px;\n    position: absolute;\n    right: 1em;\n    top: 2.9em;\n    width: 100px;\n    border-radius: 4px 4px;\n}\n\n.coin-logo__image {\n    width: 100%;\n}\n\n.lds-ellipsis {\n    display: inline-block;\n    position: relative;\n    width: 64px;\n    height: 64px;\n    margin: 0 40%;\n}\n\n.lds-ellipsis div {\n    position: absolute;\n    top: 27px;\n    width: 11px;\n    height: 11px;\n    border-radius: 50%;\n    background: #1b98e0;\n    -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);\n    animation-timing-function: cubic-bezier(0, 1, 1, 0);\n}\n\n.lds-ellipsis div[data-v-3b8e3da2]:nth-child(1) {\n    left: 6px;\n    -webkit-animation: lds-ellipsis1 .6s infinite;\n    animation: lds-ellipsis1 .6s infinite;\n}\n\n.lds-ellipsis div:nth-child(2) {\n    left: 6px;\n    -webkit-animation: lds-ellipsis2 .6s infinite;\n    animation: lds-ellipsis2 .6s infinite;\n}\n\n.lds-ellipsis div:nth-child(3) {\n    left: 26px;\n    -webkit-animation: lds-ellipsis2 .6s infinite;\n    animation: lds-ellipsis2 .6s infinite;\n}\n\n.lds-ellipsis div:nth-child(4) {\n    left: 45px;\n    -webkit-animation: lds-ellipsis3 .6s infinite;\n    animation: lds-ellipsis3 .6s infinite;\n}\n\n@-webkit-keyframes lds-ellipsis1 {\n    0% {\n        -webkit-transform: scale(0);\n        transform: scale(0);\n    }\n    100% {\n        -webkit-transform: scale(1);\n        transform: scale(1);\n    }\n}\n\n@keyframes lds-ellipsis1 {\n    0% {\n        -webkit-transform: scale(0);\n        transform: scale(0);\n    }\n    100% {\n        -webkit-transform: scale(1);\n        transform: scale(1);\n    }\n}\n\n@-webkit-keyframes lds-ellipsis3 {\n    0% {\n        -webkit-transform: scale(1);\n        transform: scale(1);\n    }\n    100% {\n        -webkit-transform: scale(0);\n        transform: scale(0);\n    }\n}\n\n@keyframes lds-ellipsis3 {\n    0% {\n        -webkit-transform: scale(1);\n        transform: scale(1);\n    }\n    100% {\n        -webkit-transform: scale(0);\n        transform: scale(0);\n    }\n}\n\n@-webkit-keyframes lds-ellipsis2 {\n    0% {\n        -webkit-transform: translate(0, 0);\n        transform: translate(0, 0);\n    }\n    100% {\n        -webkit-transform: translate(19px, 0);\n        transform: translate(19px, 0);\n    }\n}\n\n@keyframes lds-ellipsis2 {\n    0% {\n        -webkit-transform: translate(0, 0);\n        transform: translate(0, 0);\n    }\n    100% {\n        -webkit-transform: translate(19px, 0);\n        transform: translate(19px, 0);\n    }\n}\n\n.site-footer {\n    display: grid;\n    grid-area: footer;\n    background: #59ffa0;\n    color: #59ffa0;\n}\n\n.site-footer > div {\n    padding: 1em .5em;\n    text-align: center;\n}\n\n.site-footer p {\n    margin: 0;\n    font-size: .8em;\n}\n\n.site-footer a:hover {\n    text-decoration: underline;\n}\n\n.app-nav-bar {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    background: #3a98e0;\n    border-radius: 0px;\n    bottom: 0px;\n    overflow: hidden;\n    height: 50px;\n    margin: 0 auto;\n    position: fixed;\n    width: 100%;\n    z-index: 10000;\n}\n\n.app-nav-bar__item {\n    color: #fff;\n    border-right: 1px solid #fff;\n    padding: 1em;\n}\n\n.app-nav-bar__item--language {\n    margin-left: auto;\n    text-transform: uppercase;\n    line-height: 60px;\n    cursor: pointer;\n    color: #fff;\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -262,7 +317,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "html,\nbody {\n    height: 500px;\n    width: 800px;\n    margin: 0;\n    padding: 0;\n    overflow-x: hidden;\n}", ""]);
+exports.push([module.i, "html,\nbody {\n    height: 360px;\n    width: 640px;\n    margin: 0;\n    padding: 0;\n    overflow-x: hidden;\n\n    background: #fdfff7;\n    font-family: Avenir, Helvetica, Arial, sans-serif;\n    color: #001021;\n}", ""]);
 // Exports
 module.exports = exports;
 
