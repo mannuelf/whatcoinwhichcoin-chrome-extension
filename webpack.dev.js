@@ -26,7 +26,7 @@ const config = {
       meta: {
         charset: "utf-8",
         viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
-        "theme-color": "#000000"
+        "theme-color": "#1b98e0"
       },
       manifest: "manifest.json",
       filename: "index.html",

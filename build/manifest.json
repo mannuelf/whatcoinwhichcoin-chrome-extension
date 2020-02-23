@@ -3,11 +3,19 @@
   "short_name": "WCWC",
   "version": "1.0.1",
   "description": "A cryptocurrency price ticker. See prices at a glance from different exchanges.",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage"
+  ],
   "content_scripts": [
     {
-      "matches": ["http://*.github.com/*"],
-      "js": ["content.js"]
+      "matches": [
+        "http://*.github.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
     }
   ],
   "background": {
