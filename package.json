@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development webpack --mode development --config webpack.dev.js --watch",
-    "build": "webpack"
+    "build": "NODE_ENV=production webpack --mode production --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,8 @@
   "keywords": [
     "javascript",
     "chrome",
-    "extension"
+    "extension",
+    "reactjs"
   ],
   "author": "Mannuel Ferreira",
   "license": "MIT",

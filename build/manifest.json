@@ -1,7 +1,7 @@
 {
   "name": "What Coin Which Coin",
   "short_name": "WCWC",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A cryptocurrency price ticker. See prices at a glance from different exchanges.",
   "permissions": [
     "activeTab",
