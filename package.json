@@ -1,0 +1,29 @@
+{
+  "name": "whatcoinwhichcoin-chrome-extension",
+  "version": "0.0.1",
+  "description": "A cryptocurrency price ticker. See prices at a glance from different exchanges.",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mannuelf/whatcoinwhichcoin-chrome-extension.git"
+  },
+  "keywords": [
+    "javascript",
+    "chrome",
+    "extension"
+  ],
+  "author": "Mannuel Ferreira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mannuelf/whatcoinwhichcoin-chrome-extension/issues"
+  },
+  "homepage": "https://github.com/mannuelf/whatcoinwhichcoin-chrome-extension#readme",
+  "devDependencies": {
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}
