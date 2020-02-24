@@ -1,5 +1,7 @@
 import React from 'react';
+import Axios from 'axios';
 
+const cors = 'https://cors-anywhere.herokuapp.com/';
 const urls = [
     'https://www.bitstamp.net/api/v2/ticker/btcusd',
     'https://www.bitstamp.net/api/v2/ticker/bchusd',
@@ -7,17 +9,42 @@ const urls = [
     'https://www.bitstamp.net/api/v2/ticker/ltcusd',
     'https://www.bitstamp.net/api/v2/ticker/xrpusd'
 ];
+let coins = [];
+try {
+    urls.map(url => {
+         Axios.get(`${cors}${url}`,
+            {headers: {'X-Requested-With': 'XMLHttpRequest'}})
+            .then(function(response) {
+                return response;
+            })
+            .then(function(json) {
+                const respData = json.data;
+                const coinName = url.substr(url.length - 6);
+                switch (coinName) {
+                    case 'btcusd':
+                        console.log(respData);
+                        break;
+                    case 'bchusd':
+                        console.log(respData);
+                        break;
+                    case 'ethusd':
+                        console.log(respData);
+                        break;
+                    case 'ltcusd':
+                        console.log(respData);
+                        break;
+                    case 'xrpusd':
+                        console.log(respData);
+                        break;
+                    default:
+                        console.log('No coins');
+                }
+            })
 
-fetch('https://www.bitstamp.net/api/v2/ticker/btcusd')
-    .then((response) => {
-        return response.json();
     })
-    .then((json) => {
-        console.log(json);
-    })
-    .catch((error) => {
-        console.log(error)
-    });
+} catch (error) {
+    console.log(error)
+}
 
 function CoinTicker(props) {
     return (
