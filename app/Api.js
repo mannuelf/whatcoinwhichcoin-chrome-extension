@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import Axios from 'axios';
 
 async function getCoins() {
@@ -41,4 +41,4 @@ async function getCoins() {
     }
 }
 
-export default getCoins();
+export default getCoins;
