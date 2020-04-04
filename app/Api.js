@@ -17,19 +17,19 @@ async function getCoins() {
                 const coinName = url.substr(url.length - 6);
                 switch (coinName) {
                     case 'btcusd':
-                        console.log(respData);
+                        console.log("btcusd",respData);
                         break;
                     case 'bchusd':
-                        console.log(respData);
+                        console.log("bchusd",respData);
                         break;
                     case 'ethusd':
-                        console.log(respData);
+                        console.log("ethusd",respData);
                         break;
                     case 'ltcusd':
-                        console.log(respData);
+                        console.log("ltcusd",respData);
                         break;
                     case 'xrpusd':
-                        console.log(respData);
+                        console.log("xrpusd",respData);
                         break;
                     default:
                         console.log('No coins');
