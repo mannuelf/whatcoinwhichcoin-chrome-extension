@@ -1,0 +1,1 @@
+export const GET_BITSTAMP_COINS = 'GET_BITSTAMP_COINS';
