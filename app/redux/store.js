@@ -8,6 +8,6 @@ export const initStore = (initialState = {}) => {
     return createStore(
         rootReducer,
         initialState,
-        composeWithDevTools(applyMiddleware(thunk, logger()))
+        composeWithDevTools(applyMiddleware(thunk, logger))
     )
 };
