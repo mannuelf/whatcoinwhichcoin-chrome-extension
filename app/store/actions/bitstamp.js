@@ -1,9 +1,9 @@
-import {GET_BITSTAMP_COINS} from "./actionTypes";
+import {GET_BITSTAMP_COINS} from "./types";
 import config from '../../config/default';
 import Axios from 'axios';
 
 export const getBitstampCoins = () => {
-    let coinss;
+    let allCoins;
     config.api.bitstamp.map(url => {
         Axios.get(`${config.api.corsFix}${url}`,
             {headers: {'X-Requested-With': 'XMLHttpRequest'}})
@@ -15,28 +15,28 @@ export const getBitstampCoins = () => {
                 const coinName = url.substr(url.length - 6);
                 switch (coinName) {
                     case 'btcusd':
-                        coinss.btcusd = singleCoin;
+                        allCoins.btcusd = singleCoin;
                         break;
                     case 'bchusd':
-                        coinss.bchusd = singleCoin;
+                        allCoins.bchusd = singleCoin;
                         break;
                     case 'ethusd':
-                        coinss.ethusd = singleCoin;
+                        allCoins.ethusd = singleCoin;
                         break;
                     case 'ltcusd':
-                        coinss.ltcusd = singleCoin;
+                        allCoins.ltcusd = singleCoin;
                         break;
                     case 'xrpusd':
-                        coinss.xrpusd = singleCoin;
+                        allCoins.xrpusd = singleCoin;
                         break;
                     default:
                         console.log('No coins');
                 }
             })
     });
-    console.log(coinss);
+    console.log(allCoins);
     return {
         type: GET_BITSTAMP_COINS,
-        coins: coinss
+        coins: allCoins
     }
 };

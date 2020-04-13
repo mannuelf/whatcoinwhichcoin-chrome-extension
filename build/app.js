@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _redux_rootReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./redux/rootReducer */ "./app/redux/rootReducer.js");
+/* harmony import */ var _store_reducers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/reducers */ "./app/store/reducers/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _components_CoinTicker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/CoinTicker */ "./app/components/CoinTicker.js");
 /* harmony import */ var _App_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./App.css */ "./app/App.css");
@@ -141,7 +141,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var store = Object(redux__WEBPACK_IMPORTED_MODULE_1__["createStore"])(_redux_rootReducer__WEBPACK_IMPORTED_MODULE_2__["default"]);
+var store = Object(redux__WEBPACK_IMPORTED_MODULE_1__["createStore"])(_store_reducers__WEBPACK_IMPORTED_MODULE_2__["default"]);
 function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_redux__WEBPACK_IMPORTED_MODULE_3__["Provider"], {
     store: store
@@ -164,8 +164,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _redux_actions_bitstamp__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../redux/actions/bitstamp */ "./app/redux/actions/bitstamp.js");
+/* harmony import */ var _store_actions_bitstamp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/actions/bitstamp */ "./app/store/actions/bitstamp.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -182,7 +181,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
 function CoinTicker(props) {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -193,23 +191,13 @@ function CoinTicker(props) {
     setCoins(props.coins);
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, coins.map(function (coin) {
-    console.log("=>", coin.btc.high);
+    console.log("=>", coin.btc);
   }));
 }
 
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    coins: state.BitstampReducer.coins
-  };
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return Object(redux__WEBPACK_IMPORTED_MODULE_2__["bindActionCreators"])({
-    getBitstampCoins: _redux_actions_bitstamp__WEBPACK_IMPORTED_MODULE_3__["getBitstampCoins"]
-  }, dispatch);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(CoinTicker));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(null, {
+  getBitstampCoins: _store_actions_bitstamp__WEBPACK_IMPORTED_MODULE_2__["getBitstampCoins"]
+})(CoinTicker));
 
 /***/ }),
 
@@ -231,23 +219,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./app/redux/actions/actionTypes.js":
-/*!******************************************!*\
-  !*** ./app/redux/actions/actionTypes.js ***!
-  \******************************************/
-/*! exports provided: GET_BITSTAMP_COINS */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_BITSTAMP_COINS", function() { return GET_BITSTAMP_COINS; });
-var GET_BITSTAMP_COINS = 'GET_BITSTAMP_COINS';
-
-/***/ }),
-
-/***/ "./app/redux/actions/bitstamp.js":
+/***/ "./app/store/actions/bitstamp.js":
 /*!***************************************!*\
-  !*** ./app/redux/actions/bitstamp.js ***!
+  !*** ./app/store/actions/bitstamp.js ***!
   \***************************************/
 /*! exports provided: getBitstampCoins */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -255,7 +229,7 @@ var GET_BITSTAMP_COINS = 'GET_BITSTAMP_COINS';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBitstampCoins", function() { return getBitstampCoins; });
-/* harmony import */ var _actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actionTypes */ "./app/redux/actions/actionTypes.js");
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types */ "./app/store/actions/types.js");
 /* harmony import */ var _config_default__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../config/default */ "./app/config/default.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
@@ -263,7 +237,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var getBitstampCoins = function getBitstampCoins() {
-  var coinss;
+  var allCoins;
   _config_default__WEBPACK_IMPORTED_MODULE_1__["default"].api.bitstamp.map(function (url) {
     axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("".concat(_config_default__WEBPACK_IMPORTED_MODULE_1__["default"].api.corsFix).concat(url), {
       headers: {
@@ -277,23 +251,23 @@ var getBitstampCoins = function getBitstampCoins() {
 
       switch (coinName) {
         case 'btcusd':
-          coinss.btcusd = singleCoin;
+          allCoins.btcusd = singleCoin;
           break;
 
         case 'bchusd':
-          coinss.bchusd = singleCoin;
+          allCoins.bchusd = singleCoin;
           break;
 
         case 'ethusd':
-          coinss.ethusd = singleCoin;
+          allCoins.ethusd = singleCoin;
           break;
 
         case 'ltcusd':
-          coinss.ltcusd = singleCoin;
+          allCoins.ltcusd = singleCoin;
           break;
 
         case 'xrpusd':
-          coinss.xrpusd = singleCoin;
+          allCoins.xrpusd = singleCoin;
           break;
 
         default:
@@ -301,25 +275,39 @@ var getBitstampCoins = function getBitstampCoins() {
       }
     });
   });
-  console.log(coinss);
+  console.log(allCoins);
   return {
-    type: _actionTypes__WEBPACK_IMPORTED_MODULE_0__["GET_BITSTAMP_COINS"],
-    coins: coinss
+    type: _types__WEBPACK_IMPORTED_MODULE_0__["GET_BITSTAMP_COINS"],
+    coins: allCoins
   };
 };
 
 /***/ }),
 
-/***/ "./app/redux/reducers/bitstamp.js":
+/***/ "./app/store/actions/types.js":
+/*!************************************!*\
+  !*** ./app/store/actions/types.js ***!
+  \************************************/
+/*! exports provided: GET_BITSTAMP_COINS */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_BITSTAMP_COINS", function() { return GET_BITSTAMP_COINS; });
+var GET_BITSTAMP_COINS = 'GET_BITSTAMP_COINS';
+
+/***/ }),
+
+/***/ "./app/store/reducers/bitstamp.js":
 /*!****************************************!*\
-  !*** ./app/redux/reducers/bitstamp.js ***!
+  !*** ./app/store/reducers/bitstamp.js ***!
   \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/actionTypes */ "./app/redux/actions/actionTypes.js");
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./app/store/actions/types.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -345,7 +333,7 @@ var initState = {
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case _actions_actionTypes__WEBPACK_IMPORTED_MODULE_0__["GET_BITSTAMP_COINS"]:
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["GET_BITSTAMP_COINS"]:
       return _objectSpread({}, state, {
         coins: action.payload
       });
@@ -357,21 +345,21 @@ var initState = {
 
 /***/ }),
 
-/***/ "./app/redux/rootReducer.js":
-/*!**********************************!*\
-  !*** ./app/redux/rootReducer.js ***!
-  \**********************************/
+/***/ "./app/store/reducers/index.js":
+/*!*************************************!*\
+  !*** ./app/store/reducers/index.js ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _reducers_bitstamp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reducers/bitstamp */ "./app/redux/reducers/bitstamp.js");
+/* harmony import */ var _bitstamp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bitstamp */ "./app/store/reducers/bitstamp.js");
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  BitstampReducer: _reducers_bitstamp__WEBPACK_IMPORTED_MODULE_1__["default"]
+  BitstampReducer: _bitstamp__WEBPACK_IMPORTED_MODULE_1__["default"]
 }));
 
 /***/ }),

@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import {getBitstampCoins} from '../redux/actions/bitstamp';
+import {getBitstampCoins} from '../store/actions/bitstamp';
 
 function CoinTicker(props) {
     const [coins, setCoins] = useState([]);
@@ -14,23 +13,11 @@ function CoinTicker(props) {
         <section>
             {
             coins.map(coin => {
-                console.log("=>", coin.btc.high);
+                console.log("=>", coin.btc);
             })
             }
         </section>
     );
 }
 
-const mapStateToProps = (state) => {
-    return {
-        coins: state.BitstampReducer.coins
-    }
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({
-        getBitstampCoins
-    }, dispatch)
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(CoinTicker);
+export default connect(null, {getBitstampCoins})(CoinTicker);

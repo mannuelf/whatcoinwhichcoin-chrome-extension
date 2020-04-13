@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {createStore, applyMiddleware} from 'redux';
-import reducer from './redux/rootReducer';
+import reducer from './store/reducers';
 import {Provider} from 'react-redux';
 import CoinTicker from './components/CoinTicker';
 import './App.css';

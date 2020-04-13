@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import BitstampReducer from './reducers/bitstamp';
+import BitstampReducer from './bitstamp';
 
 export default combineReducers({
     BitstampReducer,

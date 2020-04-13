@@ -1,4 +1,4 @@
-import {GET_BITSTAMP_COINS} from '../actions/actionTypes';
+import {GET_BITSTAMP_COINS} from '../actions/types';
 const initState = {coins: [{btc: {high: 199, low: 99}}, {bch: {high: 199, low: 99}}]};
 
 export default (state = initState, action) => {
