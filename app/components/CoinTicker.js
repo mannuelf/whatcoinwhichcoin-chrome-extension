@@ -1,23 +1,24 @@
 import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
-import {getBitstampCoins} from '../store/actions/bitstamp';
+import PropTypes from "prop-types";
+import {Coins} from '../store/actions/bitstamp';
 
-function CoinTicker(props) {
+const CoinTicker = ({Coins}) => {
     const [coins, setCoins] = useState([]);
 
     useEffect(() => {
-        setCoins(props.coins);
-    },[]);
+        setCoins(Coins);
+    }, []);
 
-    return (
-        <section>
-            {
-            coins.map(coin => {
-                console.log("=>", coin.btc);
-            })
-            }
-        </section>
-    );
+
 }
 
-export default connect(null, {getBitstampCoins})(CoinTicker);
+CoinTicker.propTypes = {
+    coins: PropTypes.array.isRequired,
+}
+
+const mapStateToProps = state => ({
+    coins: state.coins,
+})
+
+export default connect(mapStateToProps)(CoinTicker);

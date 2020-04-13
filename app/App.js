@@ -1,18 +1,14 @@
 import * as React from 'react';
-import {createStore, applyMiddleware} from 'redux';
-import reducer from './store/reducers';
 import {Provider} from 'react-redux';
+import store from "./store/index";
 import CoinTicker from './components/CoinTicker';
 import './App.css';
 
-const store = createStore(reducer);
+const App = () =>
+    <Provider store={store}>
+        <div className="root container">
+            <CoinTicker/>
+        </div>
+    </Provider>
 
-export default function App() {
-    return (
-        <Provider store={store}>
-            <div className="root container">
-                <CoinTicker/>
-            </div>
-        </Provider>
-    );
-}
+export default App;

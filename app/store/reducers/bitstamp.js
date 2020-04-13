@@ -1,13 +1,12 @@
 import {GET_BITSTAMP_COINS} from '../actions/types';
-const initState = {coins: [{btc: {high: 199, low: 99}}, {bch: {high: 199, low: 99}}]};
+
+const initState = [];
 
 export default (state = initState, action) => {
-    switch (action.type) {
+    const {type, payload} = action;
+    switch (type) {
         case GET_BITSTAMP_COINS:
-            return {
-                ...state,
-                coins: action.payload,
-            };
+            return [...state, payload]
         default:
             return state;
     }
